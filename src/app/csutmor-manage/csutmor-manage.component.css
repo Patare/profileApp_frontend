@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: SFUIDisplay;
+}
+
+a {
+    color: var(--color-dark);
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+/* ================== MAIN ==================== */
+main {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    background: #f7f7f8;
+    width: 82rem;
+}
+
+
+/* ================== TOP ==================== */
+
+main .top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #435763;
+}
+
+main .top img{
+    height: 25px;
+    width: 25px;
+    margin-top: -2PX;
+    margin-right: 15PX;
+}
+
+main .top .signout a{
+    margin-top: -35PX;
+    padding-left: 182%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .top .signout h3{
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+main h1{
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #435763;
+}
+
+/* ================== CARDS ==================== */
+
+main .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 0px;
+    padding-right: 10%;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+
+main .cards > div {
+    display: grid;
+    grid-template-columns: 0.1fr auto;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    width: 280px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 12px 12px 12px 12px;
+}
+
+main .cards .icons{
+    display: flex;
+    justify-content: center;
+    padding-top: 17%;
+    height: 100px;
+    width: 100px;
+    margin-left: 80px;
+
+}
+
+main .cards img{
+    width: 53px;
+    height: 56px;
+}
+
+main .cards .card-body{
+
+    width: 100px;
+}
+main .cards .card-body p{
+    margin-top: 5px;
+}
+
+main .cards a {
+    display: flex;
+    width: 1000PX;
+    color: #435763;
+    position: relative;
+    font-size: 20px;
+    padding-top: 0.5rem;
+}
+
+main .cards p{
+    padding-top: 0.2rem;
+    color: #435763;
+    font-weight: bold;
+    width: 1000PX;
+    font-size: 19px;
+}

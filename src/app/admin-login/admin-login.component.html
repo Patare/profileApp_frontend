@@ -1,0 +1,23 @@
+
+<!-- <html > -->
+<div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+
+    <h3>Sign in here</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+        <div class="inputBox"> 
+            <input id="EmailId" type="email" name="EmailId" placeholder="EmailId"  formControlName="EmailId">
+            <input id="password"  type="password" name="Password" placeholder="Password"  formControlName="password"> 
+        </div> 
+        <div class="login" routerLink="home">
+        <input type="submit"  value="Login" (click)="onloginClick()"></div>
+    </form>     
+    <a routerLink="forget_pass" (click)="onForgetClick()">Forget Password<br> </a>
+    <div class="text-center" routerLink="register" (click)="onRegisterClick()">
+        <p style="color: orange;">Sign-Up</p>
+    </div>
+
+  </div>
+  
+  <!-- <router-outlet></router-outlet> -->
+  <!-- [formGroup]="loginForm" -->
+<!-- </html> -->

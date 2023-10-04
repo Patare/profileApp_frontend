@@ -1,0 +1,108 @@
+<div class="w-100">
+    <div class="row px-4">
+      <div class="headerreservation mb-2">Profile Form
+  
+        <button type="submit" class="close" routerLink="home" (click)="OnCancelClick()">
+          <span>&times;</span>
+        </button>
+      </div>
+  
+    </div>
+    <form  (ngSubmit)="Profile()">
+      <div class="buttons">
+        <div class="row no-gutters bgWhite">
+          <div class="col-md-11 col-12 d-flex flex-column">
+            <div class="col-12 mt-4 mt-lg-0">
+              <div class="row inputRow" >
+                <div class="col-4 col-lg-2 my-auto">
+                  <label>Politician Photo</label>
+                </div>
+  
+                <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
+                  <img height="90px" width="90px" [src]="imgsrc" alt=" ">
+                  <input type="file" class="form-control" (change)="profilePhoto($event)"
+                    accept="image/png, image/gif, image/jpeg" formControlName="photo">
+                </div>
+  
+                <div class="col-4 col-lg-2 my-auto">
+                  <label>Political Party logo </label>
+                </div>
+  
+                <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
+                  <img height="90px" width="90px" [src]="imglogo" alt=" ">
+                  <input type="file" class="form-control" (change)="Logo($event)"
+                    accept="image/png, image/gif, image/jpeg" formControlName="logo">
+                </div>
+  
+              </div>
+  
+              <div class="row inputRow">
+                <div class="col-4 col-lg-2 my-auto">
+                  <label>Photo Gallery</label>
+                </div>
+  
+  
+                <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
+                  <div class="myDIV">
+                    <img height="90px" width="90px" id="selectimg" *ngFor='let multiple1 of multiples1; let i1 = index;' [src]="multiple1"
+                      action="button" (click)="onclickPhotoimg(multiple1,i1)">
+                  </div>
+  
+                  <div class="hide">For Delete Image click on Image.</div>
+  
+                  <input type="file" class="form-control" multiple="multiple" (change)="photosGallery($event)"
+                    accept="image/png, image/gif, image/jpeg">
+  
+                </div>
+  
+  
+  
+                <div class="col-4 col-lg-2 my-auto">
+                  <label>News Gallery</label>
+                </div>
+  
+                <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
+                  <div class="myDIV">
+                    <img height="90px" width="90px" id="selectimg" *ngFor='let multiple2 of multiples2; let i2 = index;' [src]="multiple2"
+                      action="button" (click)="onclickNewsimg(multiple2,i2)" >
+                  </div>
+  
+                  <div class="hide">For Delete Image click on Image.</div>
+  
+                  <input type="file" class="form-control" multiple="multiple" (change)="newsGallery($event)"  accept="image/png, image/gif, image/jpeg">
+  
+                </div>
+  
+  
+              </div>
+  
+  
+              <div class="row inputRow">
+  
+                <div class="col-4 col-lg-5 mb-8 mb-lg-0 pl-md-0 py-0">
+                </div>
+
+                
+                <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0" routerLink="Profile_form" (click)="OnPreviousClick()">
+                    <button class="btn btn-primary submitbt rounded">Previous</button>
+                </div>
+    
+  
+                <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0" routerLink="home" (click)="OnSubmitClick()">
+                  <button class="btn btn-success submitbt rounded">Submit</button>
+                </div>
+  
+                <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0" routerLink="home" (click)="OnCancelClick()">
+                  <button class="btn btn-light cancle rounded">Cancel</button>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- <router-outlet></router-outlet>
+  [formGroup]="profileForm"
+  -->

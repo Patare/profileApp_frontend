@@ -1,0 +1,33 @@
+<div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+  <h2>Register Here</h2>
+
+  <body>
+
+    <form [formGroup]="regUser"  (ngSubmit)="register(regUser.value)">
+    <div class="row ">
+
+        <div class="column"> <input id="Username" type="text" name="Username" placeholder="Username" formControlName="Username" required> </div>
+    </div>
+
+    <div class="row ">
+
+      <div class="column"> <input id="EmailId" type="text" name="EmailId" placeholder="EmailId" formControlName="EmailId" required> </div>
+    </div>
+
+    <div class="row ">
+
+      <div class="Address"> <input id="Address" type="text" name="Address" placeholder="Address" formControlName="Address" required> </div>
+    </div>
+
+    <div class="row ">
+
+      <div class="column"> <input id="password" type="password" name="password" placeholder="Password" formControlName="password" required> </div>
+    </div>
+    <input type="submit" name="" value="Register" >
+    </form>
+  </body>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- <form [formGroup]="regUser" (ngSubmit)="register()"> -->

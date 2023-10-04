@@ -1,0 +1,23 @@
+
+<div class="loginBox"> 
+    <h2>Reset Password</h2>
+        <body>
+            <form  (ngSubmit)="forgetUser()">
+            <div class="email"> <input id="email" type="email" name="emailid" placeholder="Email ID" formControlName="email" required> </div>
+      
+        <div class="row ">  
+            <div class="column"> <input id="password" type="password" name="password" placeholder="Password"formControlName='pass' required> </div>
+        </div>
+      
+        <div class="row ">
+            <div class="column"> <input id="repassword" type="password" name="repassword" placeholder="Confirm Password"formControlName='repass' required> </div>
+        </div>
+      
+      <input type="submit" value="Update Password" routerLink="login" (click)="onForgetpassClick()">
+      
+    </form>
+    </body>
+</div>
+<!-- <router-outlet></router-outlet>
+[formGroup]="forgetPass"
+-->

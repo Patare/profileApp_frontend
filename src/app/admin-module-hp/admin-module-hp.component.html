@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <!--BOOTSTRAP-->
+
+</head>
+
+<body>
+    <!--CONTAINER-->
+
+    <div class="container">
+        <!--This is aside
+            It contains sidebar, subcription card and last child-->
+
+        <aside>
+            <!--SIDEBAR STARTED FROM HERE-->
+            <div class="sidebar">
+                <a routerLink="Dashboard" (click)="onDashBordClick()">
+                    <img src="assets/HomePageImg/logo/Restaurent.png" alt="">
+                    <h3>Dashboard</h3>
+                </a>
+                <a routerLink="Manage_customer" (click)="onManageClick()">
+                    <img src="assets/HomePageImg/logo/Reservation_White.png" alt="">
+                    <h3>Manage customer</h3>
+                </a>
+                <a routerLink="Profile_form" (click)="onProfClick()">
+                    <img src="assets/HomePageImg/logo/Reservation_White.png" >
+                    <h3>Profile Form</h3>
+                </a>
+                <a routerLink="update_Profile" (click)="onUpdateClick()">
+                    <img src="assets/HomePageImg/logo/Reports_White.png" alt="">
+                    <h3>Update Profile</h3>
+                </a>
+                <a href="#">
+                    <img src="assets/HomePageImg/logo/Account_White.png" alt="">
+                    <h3>Account</h3>
+                </a>
+                <a href="#">
+                    <img src="assets/HomePageImg/logo/Settings_White.png" alt="">
+                    <h3>Settings</h3>
+                </a>
+            </div>
+            <!--SIDE BAR ENDS HERE-->
+
+
+            <!--Last Child for Sidebar Ends Here-->
+        </aside>
+        <!--ASIDE ENDED-->
+
+        <!--MAIN STARTED HERE-->
+        <main>
+
+            <!--TOP STARTS HERE
+                It contains menu and signout buttons-->
+            <div class="top">
+                <div class="menu">
+                    <a href="#">
+                        <img src="assets/HomePageImg/logo/menu.svg" alt="">
+                    </a>
+                </div>
+                <div class="signout">
+                    <a routerLink="login" (click)="onloginClick()" >
+                        <img src="assets/HomePageImg/logo/Sign Out.png" alt="">
+                        <h3>Sign Out</h3>
+                    </a>
+                </div>
+                <!-- <div><router-outlet></router-outlet></div> -->
+             </div>
+            <!--TOP ENDS HERE-->
+
+        </main>
+        <!--MAIN ENDED HERE-->
+
+    </div>
+    <!--CONTAINER ENDED HERE-->
+</body>
+
+</html>
