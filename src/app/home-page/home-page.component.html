@@ -63,25 +63,29 @@
                 <a href="#" routerLink="../login" (click)="onloginClick()">
                     <img src="assets/HomePageImg/logo/Sign Out.png" >
                     <h3>Sign Out</h3>
-                    
                 </a>
                 </div>
                 <!-- <div><router-outlet></router-outlet></div> -->
             </div>
             <!--TOP ENDS HERE-->
-
-            <h1>{{username}}</h1>
-            
+<!-- <div *ngFor="item of username">
+  
+</div> -->
+<div>
+    <h1>{{LoggedInUser}}</h1>
+    <h1>{{ProfileID}}</h1>
+  </div>
+          
+           
             <!--CARDS STARTED HERE-->
             <div class="cards">
-
                 <div class="existing_profile" action="button" (click)="sucessnotify()">
                     <div class="icons">
                         <img src="assets/HomePageImg/logo/Restaurant.png" alt="" >
                     </div>
                     
                     <div class="card-body">
-                        <a href="#">Existing Profile</a>
+                        <a  routerLink="/update_Profile">Existing Profile</a>
                     </div>
                 </div>
 

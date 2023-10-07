@@ -1,31 +1,30 @@
-<div class="w-100">
+<div class="pagewidh">
   <div class="row px-4">
-    <div class="headerreservation mb-2">Update Profile Form
-      <button type="submit" class="close" routerLink="home" (click)="onCancleClick()">
+    <div class="headerreservation mb-2">
+      Update Profile Form
+      <button type="submit" class="close" routerLink="home">
         <span>&times;</span>
       </button>
     </div>
   </div>
-  <form  (ngSubmit)="updateProfile()">
+  <form [formGroup]="updateForm" (ngSubmit)="updateData()">
     <div class="buttons">
       <div class="row no-gutters bgWhite">
         <div class="col-md-11 col-12 d-flex flex-column">
           <div class="col-12 mt-4 mt-lg-0">
-
             <div class="row inputRow">
-
               <div class="col-4 col-lg-2 my-auto">
                 <label for="exampleSelect1" class="form-label">Politician Name</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="pname" required>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="PoliticianName" />
               </div>
 
               <div class="col-4 col-lg-2 my-auto">
                 <label for="ShidtSelect" class="form-label">Political Party Name</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="partyname">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="PoliticalPartyName" />
               </div>
             </div>
 
@@ -33,15 +32,15 @@
               <div class="col-4 col-lg-2 my-auto">
                 <label for="exampleSelect1" class="form-label">Phone Number</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="phoneno">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="PhoneNumber" />
               </div>
 
               <div class="col-4 col-lg-2 my-auto">
                 <label for="ShidtSelect" claxss="form-label">WhatsApp Phone Number</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="whatsappno">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="whatsappno" />
               </div>
             </div>
 
@@ -49,15 +48,15 @@
               <div class="col-4 col-lg-2 my-auto">
                 <label for="exampleSelect1" class="form-label">Email ID</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="email">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="MailId" />
               </div>
 
               <div class="col-4 col-lg-2 my-auto">
                 <label for="ShidtSelect" class="form-label">Party Office Location</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="officeloction">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="Partyofficelocation" />
               </div>
             </div>
 
@@ -65,17 +64,16 @@
               <div class="col-4 col-lg-2 my-auto">
                 <label for="exampleSelect1" class="form-label">Instagram ID</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="insta">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="InstagramId" />
               </div>
 
               <div class="col-4 col-lg-2 my-auto">
                 <label for="exampleSelect1" class="form-label">Facebook ID</label>
               </div>
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="facebook">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="FecebookId" />
               </div>
-
             </div>
 
             <div class="row inputRow">
@@ -83,21 +81,18 @@
                 <label for="exampleSelect1" class="form-label">Twitter ID</label>
               </div>
 
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-                <input type="text" class="form-control" formControlName="twitterId">
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="TwitterId" />
               </div>
 
-              <div class="col-4 col-lg-2 my-auto  ">
+              <div class="col-4 col-lg-2 my-auto">
                 <label for="confirmed">You Tube Link</label>
               </div>
 
-              <div class="col-8 col-lg-4 mb-4 mb-lg-0 ">
-
-                <input type="text" class="form-control" formControlName="youtube">
-
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input type="text" class="form-control" formControlName="YouTubeLink" />
               </div>
             </div>
-
 
             <div class="row inputRow">
               <div class="col-4 col-lg-2 my-auto">
@@ -105,28 +100,56 @@
               </div>
 
               <div class="col-8 col-lg-10 mb-9 mb-lg-0">
-                <input type="text" class="form-control" formControlName="info">
+                <input type="text" class="form-control" formControlName="PoliticiansInformation" />
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label>Politician Photo</label>
+              </div>
+
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <div>
+                  <img height="180px" width="180px" [src]="imgsrc" />
+                  <input type="file" class="form-control" (change)="profilePhoto($event)"
+                    accept="image/png, image/gif, image/jpeg" />
+                </div>
+              </div>
+
+              <div class="col-4 col-lg-2 my-auto">
+                <label>Political Party logo </label>
+              </div>
+
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <div>
+                  <img height="180px" width="180px" [src]="imglogo" />
+                  <input type="file" class="form-control" (change)="Logo($event)"
+                    accept="image/png, image/gif, image/jpeg" />
+                </div>
               </div>
             </div>
             <div class="row inputRow">
-              <div class="col-4 col-lg-5 mb-8 mb-lg-0 pl-md-0 py-0">
+              <div class="col-4 col-lg-5 mb-8 mb-lg-0 pl-md-0 py-0"></div>
+
+              <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0" routerLink="home" (click)="onUpdateClick()">
+                <button class="btn btn-success submitbt rounded" (click)="updateData()">Update</button>
               </div>
 
-              <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0" routerLink="home" (click)="onCancleClick()">
+              <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0" routerLink="home">
                 <button class="btn btn-light cancle rounded">Cancel</button>
               </div>
-    
-              <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0" routerLink="imgupdate_form" (click)="onNextClick()">
-                <button class="btn btn-success submitbt rounded">Next</button>
-              </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </form>
 </div>
+
+
 <!-- <router-outlet></router-outlet> -->
-<!-- [formGroup]="updateform" -->
+<app-img-profile-form [data]="photo_gallary_images" [gallary_name]="PhotoGallaryName"
+  [User_data1]="getAll_data"></app-img-profile-form>
+<app-img-profile-form [data]="news_gallary_images" [gallary_name]="NewsGallaryName"
+  [User_data1]="getAll_data"></app-img-profile-form>

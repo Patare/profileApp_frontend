@@ -13,6 +13,8 @@ import { NoPageComponent } from './no-page/no-page.component';
 import { ImgProfileFormComponent } from './img-profile-form/img-profile-form.component';
 import { ImgUpdateFormComponent } from './img-update-form/img-update-form.component';
 
+
+
 const routes: Routes = [
   /* {
     component:NoPageComponent,
@@ -33,6 +35,7 @@ const routes: Routes = [
   {
     component:HomePageComponent,
     path:'Home'
+
   },
   {
     component: AdminModuleHpComponent,

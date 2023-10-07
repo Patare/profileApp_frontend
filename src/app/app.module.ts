@@ -8,12 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { ImgProfileFormComponent } from './img-profile-form/img-profile-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegUserComponent,
     AdminLoginComponent,
-    HomePageComponent
+    HomePageComponent,
+    UpdateProfileComponent,
+    ImgProfileFormComponent
   ],
   imports: [
     BrowserModule,

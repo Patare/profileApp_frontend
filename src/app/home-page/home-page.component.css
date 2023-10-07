@@ -220,7 +220,7 @@ main .top .signout a{
     justify-content: space-evenly;
 }
 
-main .top .signout h3{
+main .top .signout h3 h5{
     margin-top: 7px;
     margin-right: 100px;
     display: inline-block;

@@ -32,9 +32,14 @@ export class AdminLoginComponent {
         })
       )
       .subscribe((res) => {
+        this.profileService.apiLoginResponse=res;
+        let responseData:any = res;
+        console.log('Hi:',res);
+        localStorage.setItem('LoggedInUser', JSON.stringify(responseData.Username));
+        localStorage.setItem('ProfileID', JSON.stringify(responseData.ProfileId));
         this.successNotify();
         this.onloginClick();  
-        console.log('login admin', res);
+        // console.log('login admin', res);
       });
   
     console.warn(this.loginForm.value);
@@ -77,6 +82,7 @@ export class AdminLoginComponent {
  
   
   public onloginClick(){
+    // send res to home page. 
     this.router.navigate(['./Home']);
   }
   public onRegisterClick(){
